@@ -1,0 +1,689 @@
+/* 通用样式 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    /* 防止水平滚动条 */
+}
+
+/* 容器样式 */
+.container {
+    width: 100%;
+    /* 使用百分比宽度使其响应式 */
+    height: 100px;
+    background-color: #19428e;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* 包括内边距和边框在内计算宽度 */
+}
+
+/* 头部样式 */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* 修改：使头部宽度为100%，以便覆盖整个页面宽度 */
+    z-index: 1000;
+    display: flex;
+    /* 使用flexbox */
+    align-items: center;
+    /* 垂直居中对齐子元素 */
+    justify-content: space-between;
+    /* 在子元素之间分配空间，logo在左，导航栏在右 */
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    /* 调整内边距以适应你的设计 */
+    border-bottom: #e8491d 3px solid;
+    /* 可选：底部边框 */
+}
+
+.logo img {
+    height: 50px;
+    /* 或其他适合你logo的高度 */
+    width: auto;
+    /* 保持图片的原始宽高比 */
+    padding: 10px 50px;
+    /* 调整内边距以适应你的设计 */
+}
+
+/* 导航栏样式 */
+.nav {
+    display: flex;
+    /* 使用flexbox使导航链接水平排列 */
+    align-items: center;
+    /* 垂直居中对齐导航链接（如果需要的话） */
+}
+
+.nav ul {
+    list-style: none;
+    /* 移除列表项标记 */
+    margin: 10px;
+    /* 移除默认的外边距 */
+    padding: 0 100px;
+    /* 移除默认的内边距 */
+    display: flex;
+    /* 使用flexbox */
+}
+
+.nav ul li {
+    margin: 0 25px;
+    /* 在导航链接之间添加一些间距 */
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: background-color 0.3s;
+    /* 平滑的背景色变化过渡效果 */
+}
+
+.nav ul li a:hover {
+    height: 100%;
+    /* 鼠标悬停时使链接的高度增加 */
+    width: auto;
+    background-color: #ff0000;
+    /* 鼠标悬停时的背景色变化 */
+}
+
+/* 响应式设计（可选） */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        /* 在小屏幕上将logo和导航栏堆叠起来 */
+        align-items: flex-start;
+        /* 将内容对齐到容器的开始位置 */
+    }
+
+    .nav ul {
+        flex-direction: column;
+        /* 使导航链接垂直排列 */
+        align-items: flex-start;
+        /* 将链接对齐到容器的开始位置 */
+    }
+
+    .nav ul li {
+        margin: 5px 0;
+        /* 在垂直排列的链接之间添加间距 */
+    }
+}
+
+/* 头部结束 */
+
+
+/* 轮播图样式开始 */
+.carousel {
+    position: relative;
+    /* overflow: hidden; */
+    /* 隐藏超出容器的部分 */
+    width: 1400px;
+    /* 根据需要调整宽度 */
+    height: 400px;
+    margin: 0px auto;
+    /* 根据需要调整高度 */
+}
+
+.carousel ul {
+    list-style: none;
+    /* 移除列表默认样式 */
+    padding: 0;
+    /* 移除默认的内边距 */
+    margin: 0;
+    /* 移除默认的外边距 */
+    width: 100%;
+    /* 列表宽度与容器相同 */
+    height: 100%;
+    /* 列表高度与容器相同 */
+    display: flex;
+    /* 使用flex布局来水平排列图片 */
+    transition: transform 0.5s ease;
+    /* 平滑过渡效果（可选，用于动画效果） */
+}
+
+.carousel ul li {
+    position: relative;
+    /* 改为相对定位，因为我们不需要重叠的图片 */
+    flex: 0 0 100%;
+    /* flex项不伸缩，占据全部可用空间 */
+    width: 100%;
+    /* 宽度与容器相同（这里其实是多余的，因为flex已经控制了） */
+    height: 100%;
+    /* 高度与容器相同 */
+    overflow: hidden;
+    /* 隐藏超出li容器的图片部分 */
+}
+
+.carousel ul li img {
+    width: 100%;
+    /* 图片宽度充满li容器 */
+    height: auto;
+    /* 图片高度自适应，保持宽高比 */
+    object-fit: cover;
+    /* 图片裁剪以填充整个容器，但保持宽高比 */
+}
+
+/* 轮播图样式结束 */
+
+
+
+/* 文字部分 */
+.top5 {
+    width: 100%;
+    /* height: 500px; */
+    margin-top: 15px;
+    padding-bottom: 125px;
+    /* background-color: rgb(226, 145, 145); */
+}
+
+.top5>p {
+    text-align: center;
+    font-style: italic;
+    /* 字体倾斜 */
+    font-size: 18px;
+    color: #666;
+}
+
+.top5>p>a {
+    font-style: italic;
+    /* 字体倾斜 */
+    font-size: 18px;
+    color: #589ee0;
+}
+
+.top5>p>a:hover {
+    color: #666;
+}
+
+.top5>.circleBox>.circle {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.top5>.circleBox>.circle>img {
+    width: 100%;
+    height: 100%;
+}
+
+.circle>.world {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    color: #666;
+}
+
+.circle>.world:hover {
+    color: #589ee0;
+}
+
+.coord {
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #908e8e;
+    background: url(../img/strategy_pos.png) 88px 4px no-repeat;
+    /* background-color: forestgreen; */
+}
+
+.circleBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+/* 主体样式开始 */
+/* 基本样式重置 */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /* 外边距 */
+    /* background-color: #ba2323; */
+    /* 背景色 */
+    /* overflow: hidden; */
+    /* 隐藏超出容器的部分 */
+}
+
+.container2 {
+    width: 1400px;
+    background-color: #fff;
+    /* 容器宽度
+    margin: 10px 10px; */
+    /* 上下外边距 */
+}
+
+.title {
+    position: relative;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 15px;
+    font-style: italic;
+
+
+
+}
+
+.title::before,
+.title::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    width: 100px;
+    /* 短线的长度 */
+    height: 4px;
+    background-color: #000000;
+    /* 短横线颜色 */
+}
+
+.title::before {
+    left: 30%;
+}
+
+.title::after {
+    right: 30%;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 三列等分 */
+    gap: 10px;
+    /* 列与列之间的间隙 */
+}
+
+.item {
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 40px;
+    /* 外边距 */
+    /* height: 40px; */
+    /* padding: px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* background-color: #b61087; */
+}
+
+.item img {
+    width: 100%;
+    /* 图片宽度 */
+    height: auto;
+    margin-bottom: 10px;
+    /* 图片与文字之间的间距 */
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    /* 圆角 */
+}
+
+.item h3 {
+    font-size: 20px;
+    /* 标题字体大小 */
+    color: #000000;
+    /* 标题颜色 */
+    margin-bottom: 10px;
+    /* 标题与内容之间的间距 */
+}
+
+.item h3 a {
+    text-decoration: none;
+    /* 移除链接下划线 */
+    color: #000000;
+    /* 标题颜色 */
+}
+
+.item h3 a:hover {
+    color: #de9d9c;
+    /* 鼠标悬停时标题颜色变化 */
+}
+
+.item p {
+    font-size: 16px;
+    /* 内容字体大小 */
+    color: #000000;
+    /* 内容颜色 */
+    margin-bottom: 10px;
+    /* 移除默认的段落间距 */
+    text-align: left;
+    text-indent: 2em;
+    /* 内容缩进 */
+
+}
+
+
+
+
+
+
+/* 主体内容第二部分  大盒子 */
+.main2 {
+    width: 1400px;
+    /* 或具体宽度 */
+    margin: 0 auto;
+    /* 居中显示，如果宽度不是100% */
+    padding: 20px;
+    /* 内边距 */
+    box-sizing: border-box;
+    /* 防止内边距影响总宽度 */
+    /* background-color: #71bc0e; */
+}
+
+.container3 {
+    width: 100%;
+    max-width: 1200px;
+    /* 最大宽度 */
+    margin: 0 auto;
+    /* 居中显示 */
+    /* background-color: #ca1313; */
+}
+
+.title1 h2 {
+    text-align: center;
+    /* 标题居中 */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /* 底部外边距 */
+    font-size: 24px;
+    font-style: italic;
+    /* 标题字体样式 */
+    /* 标题字体大小 */
+    /* background-color: #1387ca; */
+
+}
+
+.title1 {
+    position: relative;
+    /* 设置为相对定位，以便伪元素可以相对于它定位 */
+    text-align: center;
+    /* 标题居中 */
+    margin-bottom: 20px;
+    /* 底部外边距 */
+
+
+}
+
+.title1:before,
+.title1:after {
+    content: "";
+    /* 伪元素的内容为空，但我们用它来创建样式 */
+    position: absolute;
+    /* 绝对定位 */
+    top: 50%;
+    /* 顶部位置，相对于自身高度的50% */
+    width: 90px;
+    /* 横线的宽度 */
+    height: 2px;
+    /* 横线的高度 */
+    background-color: #000;
+    /* 横线的颜色 */
+}
+
+.title1:before {
+    left: 30%;
+    /* 左侧伪元素的位置 */
+    transform: translateY(-50%);
+    /* 向上移动自身高度的50%，以确保它完全居中 */
+}
+
+.title1:after {
+    right: 30%;
+    /* 右侧伪元素的位置 */
+    transform: translateY(-50%);
+    /* 向上移动自身高度的50%，以确保它完全居中 */
+}
+
+
+.content-list {
+    list-style: none;
+    /* 移除列表样式 */
+    padding: 0;
+    /* 移除默认的内边距 */
+    display: flex;
+    /* 使用Flexbox布局 */
+    flex-wrap: wrap;
+    /* 允许子项换行 */
+    justify-content: space-around;
+    /* 子项之间的间隔均匀 */
+}
+
+.item1 {
+    flex: 1 1 250px;
+    /* Flex项的最小宽度为250px，但可以根据需要增长 */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    /* 底部外边距 */
+    text-align: center;
+    /* 文本居中   */
+    /* background-color: #ca13ca; */
+
+}
+
+
+
+.item1 h3 a {
+    text-decoration: none;
+    /* 移除下划线 */
+    color: #e40d0d;
+    /* 字体颜色 */
+
+    /* text-align: center;  */
+    /* 文本居中   */
+
+}
+
+.item1 h3 a:hover {
+    text-decoration: underline;
+    /* 鼠标悬停时添加下划线 */
+    color: #d04f4f;
+    /* 鼠标悬停时更改字体颜色 */
+}
+
+.center-bold {
+    text-align: center;
+    /* 居中 */
+    font-weight: bold;
+    /* 加粗 */
+}
+
+.text-right {
+    text-align: right;
+    /* 两端对齐 */
+
+    padding: 20px;
+    /* text-align: right;  */
+    /* 水平靠右 */
+    /* padding-right: 50px; */
+}
+
+.text-left-indent {
+    text-indent: 2em;
+    /* 首行缩进两个字符 */
+    text-align: justify;
+    /* 两端对齐 */
+    line-height: 23px;
+    padding: 20px;
+    /* 上下内边距 */
+    padding-left: 30px;
+    /* 左内边距 */
+    padding-right: 30px;
+    /* 右内边距 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 底部样式 */
+/* 底部大盒子样式 */
+.footer {
+    width: 100%;
+    background-color: #35424a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    /* 如果需要整个footer文本居中，但此处可能不适用 */
+    font-family: Arial, sans-serif;
+    /* 设置字体 */
+}
+
+.container4 {
+    width: 80%;
+    /* 假设的最大宽度 */
+    margin: 0 auto;
+    /* 居中显示 */
+    padding: 20px;
+    /* 为内部元素添加一些内边距 */
+}
+
+.footer-Top h2 {
+    margin: 0 0 20px 0;
+    /* 移除上下的外边距，只保留下方的外边距 */
+    padding: 10px 20px;
+    /* 为标题添加一些内边距，使其不紧贴边缘 */
+    font-size: 24px;
+    color: #5762a0;
+    /* 标题颜色 */
+    border-bottom: 2px solid #5e5e5e;
+    /* 底部边框 */
+    text-align: center;
+    /* 标题左对齐 */
+}
+
+.footer-Middle {
+    display: flex;
+    /* 使用Flexbox布局 */
+    justify-content: space-between;
+    /* 左右对齐子元素 */
+    align-items: flex-start;
+    /* 垂直方向顶部对齐 */
+}
+
+.footer-left,
+.footer-center {
+    flex: 1;
+    /* 使左右两部分平分剩余空间，但这里可能需要调整 */
+}
+
+.footer-left ul {
+    list-style: none;
+    /* 移除列表样式 */
+    padding: 10px;
+    /* 移除默认的内边距 */
+    margin: 0;
+    /* 移除默认的外边距 */
+}
+
+.footer-left h3 {
+    margin: 10px 0 10px 0;
+    /* 移除默认的外边距，只保留下方的外边距 */
+    color: #5762a0;
+    font-size: 20px;
+    font-weight: bold;
+    /* 加粗标题 */
+    text-align: left;
+    /* 左对齐 */
+}
+
+.footer-left p {
+    margin: 0 0 10px 0;
+    /* 移除默认的外边距，只保留下方的外边距 */
+    line-height: 1.6;
+    font-size: 14px;
+    /* 稍微减小字体大小以容纳更多内容 */
+    color: #acacac;
+    text-align: justify;
+    /* 两端对齐 */
+    /* text-indent: 2em; */
+    /* 首行缩进两个字符 */
+}
+
+
+.footer-center ul {
+    list-style: none;
+    padding: 10px;     /* 移除默认的外边距 */
+    margin-left: 100px;
+    text-align: left;
+    /* 右对齐列表项 */
+    line-height: 50px;
+}
+
+.footer-center li {
+    margin: 5px 0;
+    /* 子项之间的间距 */
+    /* display: inline-block; */
+    /* 使子项在一行显示 */
+}
+
+.footer-center a {
+    text-decoration: none;
+    color: #acacac;
+    font-size: 16px;
+}
+
+.footer-center a:hover {
+    color: #fff;
+}
+
+/*  右侧样式*/
+
+
+
+
+
+.footer-bottom {
+    margin-bottom: 1px;
+    /* 与上面的内容隔开一些距离 */
+    text-align: center;
+    /* 底部版权信息居中显示 */
+    font-size: 12px;
+    /* 稍微减小字体大小 */
+    color: #777;
+    /* 较浅的灰色 */
+}
+
+.footer-bottom a {
+    color: #777;
+    /* 链接颜色 */
+    text-decoration: none;
+    /* 移除下划线 */
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+    /* 鼠标悬停时添加下划线 */
+
+}

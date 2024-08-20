@@ -1,0 +1,483 @@
+/* 通用样式 */
+/* 通用样式 */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    /* 防止水平滚动条 */
+}
+
+/* 容器样式 */
+.container {
+    width: 100%;
+    /* 使用百分比宽度使其响应式 */
+    height: 100px;
+    background-color: #19428e;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* 包括内边距和边框在内计算宽度 */
+}
+
+/* 头部样式 */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* 修改：使头部宽度为100%，以便覆盖整个页面宽度 */
+    z-index: 1000;
+    display: flex;
+    /* 使用flexbox */
+    align-items: center;
+    /* 垂直居中对齐子元素 */
+    justify-content: space-between;
+    /* 在子元素之间分配空间，logo在左，导航栏在右 */
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    /* 调整内边距以适应你的设计 */
+    border-bottom: #e8491d 3px solid;
+    /* 可选：底部边框 */
+}
+
+.logo img {
+    height: 50px;
+    /* 或其他适合你logo的高度 */
+    width: auto;
+    /* 保持图片的原始宽高比 */
+    padding: 10px 50px;
+    /* 调整内边距以适应你的设计 */
+}
+
+/* 导航栏样式 */
+.nav {
+    display: flex;
+    /* 使用flexbox使导航链接水平排列 */
+    align-items: center;
+    /* 垂直居中对齐导航链接（如果需要的话） */
+}
+
+.nav ul {
+    list-style: none;
+    /* 移除列表项标记 */
+    margin: 10px;
+    /* 移除默认的外边距 */
+    padding: 0 100px;
+    /* 移除默认的内边距 */
+    display: flex;
+    /* 使用flexbox */
+}
+
+.nav ul li {
+    margin: 0 25px;
+    /* 在导航链接之间添加一些间距 */
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: background-color 0.3s;
+    /* 平滑的背景色变化过渡效果 */
+}
+
+.nav ul li a:hover {
+    height: 100%;
+    /* 鼠标悬停时使链接的高度增加 */
+    width: auto;
+    background-color: #ff0000;
+    /* 鼠标悬停时的背景色变化 */
+}
+
+/* 响应式设计（可选） */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        /* 在小屏幕上将logo和导航栏堆叠起来 */
+        align-items: flex-start;
+        /* 将内容对齐到容器的开始位置 */
+    }
+
+    .nav ul {
+        flex-direction: column;
+        /* 使导航链接垂直排列 */
+        align-items: flex-start;
+        /* 将链接对齐到容器的开始位置 */
+    }
+
+    .nav ul li {
+        margin: 5px 0;
+        /* 在垂直排列的链接之间添加间距 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 第二部分样式 */
+
+.main {
+    width: 1200px;
+    /* 假设的最大宽度 */
+    height: 800px;
+    margin: 0 auto;
+    /* 居中显示 */
+    padding: 20px;
+    /* 为内部元素添加一些内边距 */
+    /* background-color: #703434; */
+}
+
+.left {
+    float: left;
+    width: 20%;
+    height: 80%;
+    /* background-color: #a6be93; */
+    padding: 20px;
+    text-align: center;
+
+}
+
+.left-top {
+    /* float: right; */
+    /* width: 60%; */
+    /* height: 50%; */
+    background-color: #dbdbdb;
+    border-radius: 8px;
+
+    /* padding: 20px; */
+}
+
+.left-middle {
+    background-color: #d2d2d2;
+    height: 110%;
+    /* 设置固定高度，根据需要调整 */
+    overflow-y: auto;
+    /* 允许在Y轴（垂直方向）上滚动 */
+    scrollbar-width: none; 
+    /* 隐藏滚动条 */
+    border-radius: 8px;
+    /* 边框圆角 */
+
+}
+
+.left-middle ul {
+    width: 100%;
+    list-style: none;
+    /* 移除列表项标记 */
+    /* margin: 10px; */
+    /* 移除默认的外边距 */
+    text-align: center;
+
+    /* padding: 0 10px; */
+    /* 移除默认的内边距 */
+    display: flex;
+    /* 使用flexbox */
+    flex-direction: column;
+    /* 垂直排列 */
+
+}
+
+.left-middle ul li {
+    margin: 5px 0;
+    /* 子项之间的间距 */
+    display: flex;
+    /* 使用flexbox */
+    justify-content: space-between;
+    /* 左右对齐 */
+
+}
+
+.left-middle ul li a {
+
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    transition: background-color 0.3s;
+    /* 平滑的背景色变化过渡效果 */
+}
+
+.left-middle ul li a:hover {
+    height: 100%;
+    /* 鼠标悬停时使链接的高度增加 */
+    width: auto;
+    background-color: #ff0000;
+    /* 鼠标悬停时的背景色变化 */
+    border-radius: 5px;
+
+}
+
+
+
+
+
+
+/* 右侧大盒子样式 */
+body {
+    font-family: Arial, sans-serif;
+    /* 设置字体 */
+    line-height: 1.6;
+    /* 行高，使文本更易读 */
+}
+
+.right {
+    width: 70%;
+    height: 75%;
+    float: right;
+    /* padding: 10px;  */
+    margin: 40px;
+    /* background-color: #b8df0c; */
+
+}
+
+.right-top {
+    /* position: fixed; */
+
+    width: 100%;
+    padding: 0;
+    margin-top: -20px;
+    text-align: center;
+    /* background-color: #9809da; */
+}
+
+
+/* 右侧大盒子   样式 */
+.right-middle {
+    width: 80%;
+    /* 宽度 */
+    margin: 0 auto;
+    /* 居中对齐 */
+    border: 1px solid #ccc;
+    /* 边框 */
+    border-radius: 8px;
+    /* 边框圆角 */
+    padding: 20px;
+    /* 内边距 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 阴影效果 */
+
+    height: 110%;
+    /* 设置固定高度，根据需要调整 */
+    overflow-y: auto;
+    /* 允许在Y轴（垂直方向）上滚动 */
+    scrollbar-width: none; 
+    /* 隐藏滚动条 */
+}
+
+/* 列表样式 */
+.right-middle ul {
+    list-style-type: none;
+    /* 去除列表前的项目符号 */
+    padding: 0;
+    /* 去除默认的内边距 */
+}
+
+/* 标题样式 */
+.right-middle h3 {
+    color: #333;
+    /* 标题颜色 */
+    border-bottom: 2px solid #666;
+    /* 底部边框 */
+    padding-bottom: 8px;
+    /* 底部内边距 */
+    margin-top: 20px;
+    /* 顶部外边距 */
+}
+
+/* 段落样式 */
+.right-middle p {
+    color: #666;
+    /* 文本颜色 */
+    margin: 10px 0;
+    /* 上下外边距 */
+}
+
+/* 段落中的换行样式 */
+.right-middle p br {
+    display: block;
+    /* 使换行符表现为块级元素 */
+    margin: 5px 0;
+    /* 上下外边距 */
+}
+
+/* 强调或高亮部分（如果需要的话） */
+.right-middle .highlight {
+    background-color: yellow;
+    /* 高亮背景色 */
+    padding: 2px 4px;
+    /* 内边距 */
+}
+
+
+
+
+
+
+
+
+/* 底部样式 */
+/* 底部大盒子样式 */
+.footer {
+    width: 100%;
+    background-color: #35424a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    /* 如果需要整个footer文本居中，但此处可能不适用 */
+    font-family: Arial, sans-serif;
+    /* 设置字体 */
+}
+
+.container4 {
+    width: 80%;
+    /* 假设的最大宽度 */
+    margin: 0 auto;
+    /* 居中显示 */
+    padding: 20px;
+    /* 为内部元素添加一些内边距 */
+}
+
+.footer-Top h2 {
+    margin: 0 0 20px 0;
+    /* 移除上下的外边距，只保留下方的外边距 */
+    padding: 10px 20px;
+    /* 为标题添加一些内边距，使其不紧贴边缘 */
+    font-size: 24px;
+    color: #e8491d;
+    /* 标题颜色 */
+    border-bottom: 2px solid #5e5e5e;
+    /* 底部边框 */
+    text-align: center;
+    /* 标题左对齐 */
+}
+
+.footer-Middle {
+    display: flex;
+    /* 使用Flexbox布局 */
+    justify-content: space-between;
+    /* 左右对齐子元素 */
+    align-items: flex-start;
+    /* 垂直方向顶部对齐 */
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+    /* 使左右两部分平分剩余空间，但这里可能需要调整 */
+}
+
+.footer-left ul {
+    list-style: none;
+    /* 移除列表样式 */
+    padding: 10px;
+    /* 移除默认的内边距 */
+    margin: 0;
+    /* 移除默认的外边距 */
+}
+
+.footer-left h3 {
+    margin: 10px 0 10px 0;
+    /* 移除默认的外边距，只保留下方的外边距 */
+    color: #5762a0;
+    font-size: 20px;
+    font-weight: bold;
+    /* 加粗标题 */
+    text-align: left;
+    /* 左对齐 */
+}
+
+.footer-left p {
+    margin: 0 0 10px 0;
+    /* 移除默认的外边距，只保留下方的外边距 */
+    line-height: 1.6;
+    font-size: 14px;
+    /* 稍微减小字体大小以容纳更多内容 */
+    color: #acacac;
+    text-align: justify;
+    /* 两端对齐 */
+    /* text-indent: 2em; */
+    /* 首行缩进两个字符 */
+}
+
+
+.footer-right ul {
+    list-style: none;
+    padding: 10px;
+    /* 移除默认的外边距 */
+    margin-left: 100px;
+    text-align: left;
+    /* 右对齐列表项 */
+    line-height: 50px;
+}
+
+.footer-right li {
+    margin: 5px 0;
+    /* 子项之间的间距 */
+    /* display: inline-block; */
+    /* 使子项在一行显示 */
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: #acacac;
+    font-size: 16px;
+}
+
+.footer-right a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    /* 与上面的内容隔开一些距离 */
+    text-align: center;
+    /* 底部版权信息居中显示 */
+    font-size: 12px;
+    /* 稍微减小字体大小 */
+    color: #777;
+    /* 较浅的灰色 */
+}
+
+/* 响应式设计（可选） */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        /* 小屏幕上改为垂直排列 */
+        align-items: flex-start;
+        /* 左对齐 */
+        text-align: center;
+        /* 文本居中显示，对于版权信息可能不需要，但对于链接列表可能是个好主意 */
+    }
+
+    .footer .right ul {
+        justify-content: center;
+        /* 链接列表在小屏幕上居中显示 */
+        flex-direction: column;
+        /* 链接在小屏幕上垂直堆叠 */
+        margin-top: 10px;
+        /* 与版权信息之间的间距 */
+    }
+
+    .footer .right ul li {
+        margin-left: 0;
+        /* 移除列表项之间的水平间距 */
+        margin-bottom: 10px;
+        /* 列表项之间的垂直间距 */
+    }
+
+    .footer .right ul li:last-child {
+        margin-bottom: 0;
+        /* 移除最后一个列表项下方的间距 */
+    }
+}
